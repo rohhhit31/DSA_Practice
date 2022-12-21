@@ -15,13 +15,15 @@ public:
         this->right = NULL;
     }
 };
-Node *insertoBST(Node *root, int d)
+Node *insertoBST(Node* root, int d)
 {
     // base case
     if (root == NULL)
     {
+        root=new Node(d);
         return root;
     }
+
     if (d > root->data)
     {
         root->right = insertoBST(root->right, d);
